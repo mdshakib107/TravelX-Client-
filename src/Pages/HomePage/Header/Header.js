@@ -12,31 +12,31 @@ const Header = () => {
                 <Navbar expand="lg" >
                     <Container className="me-auto">
                         <NavLink to="/">
-                            <img src="./image/logo.png" alt="" width="200" height="50" />
+                            <img src="./images/logo.png" alt="" width="200" height="50" />
                         </NavLink>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
 
-                                <Link className="text-decoration-none text-white fw-bold fs-5 px-2 " to="/productmedicine">
+                                {/* <Link className="text-decoration-none text fw-bold fs-5 px-2 " to="/packages">
                                     Packages
-                                </Link>
-                                {user.email && <Link className="text-decoration-none text-white fw-bold fs-5 px-2" to="/labtest">
+                                </Link> */}
+                                {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/labtest">
                                     Manage All Products
                                 </Link>}
-                                {user.email && <Link className="text-decoration-none text-white fw-bold fs-5 px-2" to="/labtest">
+                                {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/labtest">
                                     Place Order
                                 </Link>}
-                                {user.email && <Link className="text-decoration-none text-white fw-bold fs-5 px-2" to="/labtest">
+                                {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/addpackage">
                                     Add A Pakages
                                 </Link>}
-                                {user.email && <Link to="/singup"><span className="fas fa-user-circle text-white fw-bold fs-5 p-2"> {user.displayName}</span></Link>}
+                                {user.email && <Link to="/singup"><span className="fas fa-user-circle text fw-bold fs-5 p-2"> {user.displayName}</span></Link>}
                                 {user.email ?
                                     <Button className="" onClick={logOut} variant="warning">Log Out</Button>
 
                                     :
-                                    <Link to="/singup" className="text-decoration-none text-white fw-bold fs-5 px-2 mx-auto">
-                                        <i className="fas fa-user-circle text-white fw-bold fs-5"></i> Sing In/Log In
+                                    <Link to="/singup" className="text-decoration-none text fw-bold fs-5 px-2 mx-auto">
+                                        <i className="fas fa-user-circle text fw-bold fs-5"></i> Sing In/Log In
                                     </Link>}
 
 
