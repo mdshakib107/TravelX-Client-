@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-
+import AuthProvider from './Contex/AuthProvider';
+import Header from './Pages/HomePage/Header/Header';
+import Footer from './Pages/HomePage/Footer/Footer';
+import Home from './Pages/HomePage/Home/Home';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import PrivateRaute from './Pages/PrivateRaute/PrivateRaute'
+import SingIn from './Pages/Register/SingIn/SingIn';
+import SingUp from './Pages/Register/SingUp/SingUp';
+import NotFound from './Pages/NotFound/NotFound';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App" >
+      <AuthProvider>
+        <BrowserRouter>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <PrivateRaute path="/placeorder:id">
+              <PlaceOrder></PlaceOrder>
+            </PrivateRaute>
+            <Route path="/singin">
+              <SingIn></SingIn>
+            </Route>
+            <Route path="/singup">
+              <SingUp></SingUp>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </BrowserRouter>
+      </AuthProvider>
+    </div >
   );
 }
 
