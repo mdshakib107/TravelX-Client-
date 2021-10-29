@@ -21,7 +21,7 @@ const AddNewPackege = () => {
     return (
         <div className="row row-col-12 row-col-md-6 container d-flex justify-content-center ">
             <div className="col-12 col-md-6  p-5">
-                <img src="" alt="" />
+                <img src="./images/addpkg.jpg" alt="" width="100%" />
             </div>
             <div className="container text-start p-5 col-12 col-md-6 ">
                 <h2>Please Add a Service</h2>

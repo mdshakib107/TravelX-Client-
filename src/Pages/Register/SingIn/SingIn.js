@@ -22,7 +22,7 @@ const SingIn = () => {
                 :
                 <div className="row row-col-12 row-col-md-6 container d-flex justify-content-center ">
                     <div className="col p-5">
-                        <img src="./image/login.png" alt="" />
+                        <img className="border border-rounded-5" src="./images/reg.jpg" alt="" />
                     </div>
                     <div className="container text-start p-5 col ">
                         <h1>Log In</h1>

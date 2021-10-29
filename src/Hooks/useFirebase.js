@@ -5,6 +5,7 @@ import initAuthintication from "../Firebase/firebase.init";
 initAuthintication()
 const useFirebase = () => {
     const [user, setUser] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState('')
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
@@ -22,15 +23,24 @@ const useFirebase = () => {
             })
     };
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            console.log(user);
             if (user) {
+
                 setUser(user)
+            } else {
+                setUser({})
             }
-        });
+            setIsLoading(false)
+        })
+        return () => unsubscribe()
     }, []);
     return {
         user,
+        setUser,
         error,
+        isLoading,
+        setIsLoading,
         singInWithGoogle,
         setError,
         logOut
