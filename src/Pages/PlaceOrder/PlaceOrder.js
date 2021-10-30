@@ -11,7 +11,7 @@ const PlaceOrder = () => {
     const { from, img, person, price, stay, title, where, description } = packag;
     const orderPackg = { from, img, person, price, stay, title, where, description };
     useEffect(() => {
-        fetch(`http://localhost:5000/singlePackage/${id}`)
+        fetch(`https://serene-atoll-12152.herokuapp.com/singlePackage/${id}`)
             .then((res) => res.json())
             .then((idData) => setPackage(idData));
     }, [id]);
@@ -23,7 +23,7 @@ const PlaceOrder = () => {
         const { userName, userEmail, phone, Address, date } = data;
         const order = { userEmail, userName, phone, Address, date, ...orderPackg };
         // console.log(order)
-        axios.post('http://localhost:5000/placeorder', order)
+        axios.post('https://serene-atoll-12152.herokuapp.com/placeorder', order)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Order Conformd');

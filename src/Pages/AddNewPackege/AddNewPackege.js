@@ -8,7 +8,7 @@ const AddNewPackege = () => {
     const onSubmit = data => {
         // console.log(data);
 
-        axios.post('http://localhost:5000/package', data)
+        axios.post('https://serene-atoll-12152.herokuapp.com/package', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

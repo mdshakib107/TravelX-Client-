@@ -9,17 +9,19 @@ const MyOrder = ({ orderPackage }) => {
 
 
     const handleDeleteProduct = (id) => {
-        console.log(id);
+        const proceed = window.confirm('Are you sure for delete?');
+        if (proceed) {
+            axios.delete(`https://serene-atoll-12152.herokuapp.com/deleteProduct/${id}`)
+                .then((result) => {
+                    if (result.deletedCount) {
+                        setIsDelete(true);
 
-        axios.delete(`http://localhost:5000/deleteProduct/${id}`)
-            .then((result) => {
-                if (result.deletedCount > 0) {
-                    alert('delet ok')
-                    setIsDelete(true);
-                } else {
-                    setIsDelete(false);
-                }
-            });
+                    }
+                    else {
+                        setIsDelete(false);
+                    }
+                });
+        }
     };
     return (
         <div>
