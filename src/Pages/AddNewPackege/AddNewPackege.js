@@ -1,13 +1,12 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
-// import './AddNewPackege.css';
 
 const AddNewPackege = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
 
         axios.post('http://localhost:5000/package', data)
             .then(res => {

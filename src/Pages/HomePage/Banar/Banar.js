@@ -8,24 +8,18 @@ const banar = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="./images/banar/1.jpg"
+                        src="./images/banar/banar.jpg"
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="./images/banar/2.jpg"
+                        src="./images/banar/2.png"
                         alt="Second slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="./images/banar/3.jpg"
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
+
 
             </Carousel>
         </div>

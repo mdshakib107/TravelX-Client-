@@ -14,6 +14,7 @@ import SingUp from './Pages/Register/SingUp/SingUp';
 import NotFound from './Pages/NotFound/NotFound';
 import Packeges from './Pages/HomePage/Packeges/Packeges';
 import AddNewPackege from './Pages/AddNewPackege/AddNewPackege';
+import MyOrders from './Pages/MyOrder/MyOrders';
 function App() {
   return (
     <div className="App" >
@@ -24,9 +25,9 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            {/* <PrivateRaute path="/packages">
-              <Packeges></Packeges>
-            </PrivateRaute> */}
+            <PrivateRaute path="/myorder">
+              <MyOrders></MyOrders>
+            </PrivateRaute>
             <PrivateRaute path="/addpackage">
               <AddNewPackege></AddNewPackege>
             </PrivateRaute>

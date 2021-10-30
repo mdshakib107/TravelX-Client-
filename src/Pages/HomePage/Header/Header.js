@@ -24,8 +24,8 @@ const Header = () => {
                                 {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/labtest">
                                     Manage All Products
                                 </Link>}
-                                {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/labtest">
-                                    Place Order
+                                {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/myorder">
+                                    My Order
                                 </Link>}
                                 {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/addpackage">
                                     Add A Pakages

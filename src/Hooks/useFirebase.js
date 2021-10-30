@@ -8,6 +8,7 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState('')
     const auth = getAuth();
+    const [isDelete, setIsDelete] = useState(null);
     const googleProvider = new GoogleAuthProvider();
 
     const singInWithGoogle = () => {
@@ -43,7 +44,9 @@ const useFirebase = () => {
         setIsLoading,
         singInWithGoogle,
         setError,
-        logOut
+        logOut,
+        isDelete,
+        setIsDelete
     }
 }
 export default useFirebase;

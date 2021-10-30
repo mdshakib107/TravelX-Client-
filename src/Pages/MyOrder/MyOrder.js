@@ -1,12 +1,29 @@
-import React from 'react';
+import axios from 'axios';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-const Package = ({ pkg }) => {
-    // console.log(pkg)
-    const { _id, from, img, person, price, stay, title, where } = pkg;
+import useAuth from '../../Hooks/useAuth';
+const MyOrder = ({ orderPackage }) => {
+    const { setIsDelete } = useAuth()
+    const { _id, from, img, person, price, stay, title, where } = orderPackage;
 
+
+
+
+    const handleDeleteProduct = (id) => {
+        console.log(id);
+
+        axios.delete(`http://localhost:5000/deleteProduct/${id}`)
+            .then((result) => {
+                if (result.deletedCount > 0) {
+                    alert('delet ok')
+                    setIsDelete(true);
+                } else {
+                    setIsDelete(false);
+                }
+            });
+    };
     return (
         <div>
+
             <div className="col">
                 <div className="card cart text-start">
                     <img src={img} className="card-img-top" alt="..." />
@@ -17,9 +34,9 @@ const Package = ({ pkg }) => {
                         <p className="card-text">Destination Countries: {where}</p>
                         <h5 className="card-title fw-bold text-danger ">Best Price: {price}</h5>
                         <p className="card-text fst-italic">Min Allowed:{person}</p>
-                        <Link to={`/placeorder${_id}`}>
-                            <Button variant="outline-success mx-1 text-end"><i className="fas fa-info-circle"></i> Book Now </Button>
-                        </Link>
+
+                        <Button variant="outline-success mx-1 text-end" onClick={() => handleDeleteProduct(_id)} ><i className="fas fa-info-circle"></i> Cancel Booking  </Button>
+
 
                     </div>
                 </div>
@@ -28,4 +45,4 @@ const Package = ({ pkg }) => {
     );
 };
 
-export default Package;
+export default MyOrder;

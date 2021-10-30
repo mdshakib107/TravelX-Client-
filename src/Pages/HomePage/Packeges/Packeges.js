@@ -3,6 +3,7 @@ import Package from './Package';
 
 const Packeges = () => {
     const [packages, setPackages] = useState([])
+
     useEffect(() => {
         fetch('http://localhost:5000/package')
             .then(res => res.json())
