@@ -7,7 +7,7 @@ const MyOrder = ({ orderPackage }) => {
 
 
     const handleDeletePackage = (id) => {
-        const proceed = window.confirm('Are you sure for delete?');
+        const proceed = window.confirm('Are you sure for Canceling Booking?');
         if (proceed) {
             axios.delete(`https://serene-atoll-12152.herokuapp.com/deleteProduct/${id}`)
                 .then((result) => {
@@ -33,7 +33,7 @@ const MyOrder = ({ orderPackage }) => {
                         <p className="card-text fw-bold">Departure Countries:{from}</p>
                         <p className="card-text fw-bold">Destination Countries: {where}</p>
                         <p className="card-text fst-italic">Min Allowed:{person}</p>
-                        <p className="card-title fw-bold text-warning text-end ">{status}</p>
+                        <p className="card-title fw-bold text-dark text-end ">{status}</p>
                         <Button variant="danger mx-1 " onClick={() => handleDeletePackage(_id)} > Cancel Booking  </Button>
                     </div>
                 </div>

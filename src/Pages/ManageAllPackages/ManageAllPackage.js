@@ -7,7 +7,7 @@ const ManageAllPackage = ({ order }) => {
 
 
     const handleDelete = (id) => {
-        const proceed = window.confirm('Are you sure for delete?');
+        const proceed = window.confirm('Are you sure for Canceling Booking?');
         if (proceed) {
             axios.delete(`https://serene-atoll-12152.herokuapp.com/admindelete/${id}`)
                 .then((result) => {
@@ -41,7 +41,7 @@ const ManageAllPackage = ({ order }) => {
                         <h5 className="card-title fw-bold">{title}</h5>
                         <p className="card-text">User Name: {userName}</p>
                         <p className="card-text">User Email:{userEmail}</p>
-                        <Button variant="danger mx-1 " onClick={() => handleDelete(_id)} > Delete  </Button>
+                        <Button variant="danger mx-1 " onClick={() => handleDelete(_id)} > Cancel Booking</Button>
                         <Button variant="outline-success mx-1 " onClick={() => handleUpdate(_id)} > {status}  </Button>
                     </div>
                 </div>
