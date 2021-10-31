@@ -1,0 +1,13 @@
+.manageCart {
+    
+    height: 200px;
+    transition: 0.6s;
+    
+  }
+  /* style for a single product  After Hover  */
+  .manageCart:hover {
+    box-shadow: 4px 4px 7px rgb(158, 157, 157);
+    border-radius: 5px;
+    border: 1px solid rgb(173, 171, 171);
+    background-color: rgb(243, 243, 243);
+  }

@@ -30,14 +30,14 @@ const SingUp = () => {
                 <div className="container d-flex justify-content-center ">
 
                     <div className="container text-start p-5 ">
-                        <h1>Sing Up</h1>
-                        <p>Sign up or Sign in to access your orders, special offers, health tips and more!</p>
+                        <h1>SingUp</h1>
+                        <p>SignUp to access your orders, special offers, Travel tips and more!</p>
                         <p>Alredy have Account? <Link to="/singin"> Go to Log In</Link> </p>
                         ------------------------or------------------------
                         <br />
 
                         <Button variant="primary" type="submit" onClick={handaleGoogleLogin}>
-                            Sing In with Google
+                            SingUp with Google
                         </Button>
                     </div>
                     <div className="p-5">

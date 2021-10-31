@@ -44,7 +44,7 @@ export default class AutoPlay extends Component {
             <div className="mb-5 p-3 ">
                 <div>
                     <div className="container">
-                        <h2 className="fs-3 fw-bold text-uppercase  text-dark"> Blog's </h2>
+                        <h2 className="fs-3 fw-bold text-uppercase  text-dark">Travel Guide Blog's </h2>
                         <Slider {...settings}>
                             <div >
                                 <img src="./images/blogs/1.png" alt="" />

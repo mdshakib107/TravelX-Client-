@@ -10,7 +10,7 @@ const Header = () => {
         <div>
             <div className="bg fixed-top">
                 <Navbar expand="lg" >
-                    <Container className="me-auto">
+                    <Container className="me-auto ">
                         <NavLink to="/">
                             <img src="./images/logo.png" alt="" width="200" height="50" />
                         </NavLink>
@@ -18,14 +18,11 @@ const Header = () => {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
 
-                                {/* <Link className="text-decoration-none text fw-bold fs-5 px-2 " to="/packages">
-                                    Packages
-                                </Link> */}
-                                {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/labtest">
-                                    Manage All Products
-                                </Link>}
                                 {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/myorder">
                                     My Order
+                                </Link>}
+                                {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/manageallpackage">
+                                    Manage All Packages
                                 </Link>}
                                 {user.email && <Link className="text-decoration-none text fw-bold fs-5 px-2" to="/addpackage">
                                     Add A Pakages

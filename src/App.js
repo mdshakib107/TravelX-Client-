@@ -12,9 +12,9 @@ import PrivateRaute from './Pages/PrivateRaute/PrivateRaute'
 import SingIn from './Pages/Register/SingIn/SingIn';
 import SingUp from './Pages/Register/SingUp/SingUp';
 import NotFound from './Pages/NotFound/NotFound';
-import Packeges from './Pages/HomePage/Packeges/Packeges';
 import AddNewPackege from './Pages/AddNewPackege/AddNewPackege';
 import MyOrders from './Pages/MyOrder/MyOrders';
+import ManageAllPackages from './Pages/ManageAllPackages/ManageAllPackages';
 function App() {
   return (
     <div className="App" >
@@ -30,6 +30,9 @@ function App() {
             </PrivateRaute>
             <PrivateRaute path="/addpackage">
               <AddNewPackege></AddNewPackege>
+            </PrivateRaute>
+            <PrivateRaute path="/manageallpackage">
+              <ManageAllPackages></ManageAllPackages>
             </PrivateRaute>
             <PrivateRaute path="/placeorder:id">
               <PlaceOrder></PlaceOrder>

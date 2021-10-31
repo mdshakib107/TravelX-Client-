@@ -25,8 +25,8 @@ const SingIn = () => {
                         <img className="border border-rounded-5" src="./images/reg.jpg" alt="" />
                     </div>
                     <div className="container text-start p-5 col ">
-                        <h1>Log In</h1>
-                        <p>Log up or log  in to access your orders, special offers, health tips and more!</p>
+                        <h1>SingIn</h1>
+                        <p> Sing in to access your orders, special offers, Travel tips and more!</p>
 
 
                         <p>New to Lets TravelX? <Link to="/singup"> Create Account </Link> </p>
@@ -34,7 +34,7 @@ const SingIn = () => {
                         <br />
 
                         <Button variant="primary" type="submit" onClick={handaleGoogleLogin} >
-                            Log In with Google
+                            SingIn with Google
                         </Button>
                     </div>
                 </div>}
